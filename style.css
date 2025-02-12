@@ -156,33 +156,34 @@ button:hover {
 .box-plants-third:hover,
 .box-plants-second-first:hover,
 .box-plants-second-second:hover,
-.box-plants-second-third:hover{
-  transform: scale(1.05); 
+.box-plants-second-third:hover {
+  transform: scale(1.05);
 }
 .slide-fwd-center {
-	-webkit-animation: slide-fwd-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
-	        animation: slide-fwd-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+  -webkit-animation: slide-fwd-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    forwards;
+  animation: slide-fwd-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
- @-webkit-keyframes slide-fwd-center {
-    0% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-    }
-    100% {
-      -webkit-transform: translateZ(160px);
-              transform: translateZ(160px);
-    }
+@-webkit-keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
-  @keyframes slide-fwd-center {
-    0% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-    }
-    100% {
-      -webkit-transform: translateZ(160px);
-              transform: translateZ(160px);
-    }
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px);
   }
+}
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px);
+  }
+}
 
 .box-plants-first {
   background-image: url(./image/houseplants.jpg);
@@ -196,13 +197,11 @@ button:hover {
 .box-plants-second-first {
   background-image: url(./image/666.jpg);
 }
-.box-plants-second-second{
+.box-plants-second-second {
   background-image: url(./image/888.jpg);
-
 }
-.box-plants-second-third{
+.box-plants-second-third {
   background-image: url(./image/777.jpg);
-
 }
 .box-plants-first p,
 .box-plants-second p,
@@ -240,13 +239,17 @@ h2 {
   justify-content: center;
   margin-top: 50px;
 }
-.improve {
+.improve,
+.improve-second {
   display: flex;
 }
 
 .box-improve-first,
 .box-improve-second,
-.box-improve-third {
+.box-improve-third,
+.box-improve-second-first,
+.box-improve-second-second,
+.box-improve-second-third {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -259,12 +262,14 @@ h2 {
   background-position: center;
   cursor: pointer;
   transition: transform 0.3s ease;
-
 }
 .box-improve-first:hover,
 .box-improve-second:hover,
-.box-improve-third:hover {
-  transform: scale(1.05); 
+.box-improve-third:hover,
+.box-improve-second-first:hover,
+.box-improve-second-second:hover,
+.box-improve-second-third:hover {
+  transform: scale(1.05);
 }
 
 .box-improve-first {
@@ -276,9 +281,21 @@ h2 {
 .box-improve-third {
   background-image: url(./image/333.jpg);
 }
+.box-improve-second-first {
+  background-image: url(./image/999.jpg);
+}
+.box-improve-second-second {
+  background-image: url(./image/100.jpg);
+}
+.box-improve-second-third {
+  background-image: url(./image/101.jpg);
+}
 .box-improve-first p,
 .box-improve-second p,
-.box-improve-third p {
+.box-improve-third p,
+.box-improve-second-first p,
+.box-improve-second-second p,
+.box-improve-second-third p {
   color: white;
   font-size: 50px;
   font-weight: 500;
@@ -392,10 +409,8 @@ h2 {
 .us img:first-child {
   position: absolute;
   transform: rotate(-10deg);
-
 }
 .us img:last-child {
-
   transform: rotate(10deg);
 }
 
@@ -517,7 +532,6 @@ table td {
   margin-bottom: 3px;
 }
 
-
 @media (max-width: 1100px) {
   .header-text {
     font-size: 18px;
@@ -555,12 +569,15 @@ table td {
   .box-plants-first,
   .box-plants-second,
   .box-plants-third,
-  .box-plants-second-first ,
-.box-plants-second-second ,
-.box-plants-second-third, 
+  .box-plants-second-first,
+  .box-plants-second-second,
+  .box-plants-second-third,
   .box-improve-first,
   .box-improve-second,
-  .box-improve-third {
+  .box-improve-third,
+  .box-improve-second-first,
+  .box-improve-second-second,
+  .box-improve-second-third {
     margin: 18px;
     height: 550px;
   }
@@ -568,21 +585,26 @@ table td {
   .box-plants-second p,
   .box-plants-third p,
   .box-plants-second-first p,
-.box-plants-second-second p,
-.box-plants-second-third p ,
+  .box-plants-second-second p,
+  .box-plants-second-third p,
   .box-improve-first p,
   .box-improve-second p,
-  .box-improve-third p {
+  .box-improve-third p,
+  .box-improve-second-first p,
+  .box-improve-second-second p,
+  .box-improve-second-third p {
     font-size: 48px;
   }
   .box-plants-third,
-.box-plants-second-third,
-  .box-improve-third {
+  .box-plants-second-third,
+  .box-improve-third,
+  .box-improve-second-third {
     display: none;
   }
   .sla,
   .sla-second,
-  .improve {
+  .improve,
+  .improve-second {
     width: 70%;
   }
   .slider,
@@ -600,10 +622,10 @@ table td {
   .commut-third {
     display: none;
   }
-.us img{
-  height: 350px;
-  width: 350px;
-}
+  .us img {
+    height: 350px;
+    width: 350px;
+  }
 
   .about h3 {
     font-size: 19px;
@@ -612,18 +634,16 @@ table td {
     font-size: 50px;
   }
   .about {
-
     width: 370px;
-  } 
-  .about p{
+  }
+  .about p {
     font-size: 15px;
   }
-  .me{
+  .me {
     width: 200px;
     height: 42px;
     font-size: 19px;
   }
-
 }
 
 @media (max-width: 955px) {
@@ -660,37 +680,40 @@ table td {
   .box-plants-first p,
   .box-plants-second p,
   .box-plants-second-first p,
-.box-plants-second-second p,
+  .box-plants-second-second p,
   .box-improve-first p,
-  .box-improve-second p {
+  .box-improve-second p,
+  .box-improve-second-first p,
+  .box-improve-second-second p,
+  .box-improve-second-third p {
     padding: 0 0 40px 23px;
   }
 
-  .us img{
+  .us img {
     height: 300px;
     width: 300px;
   }
-  
-    .about h3 {
-      font-size: 17px;
-    }
-    .about h2 {
-      font-size: 45px;
-    }
-    .about {
-      width: 340px;
-    } 
-    .about p{
-      font-size: 13px;
-    }
-    .me{
-      width: 190px;
-      height: 40px;
-      font-size: 17px;
-    }
-    .system{
-      display: none;
-    }
+
+  .about h3 {
+    font-size: 17px;
+  }
+  .about h2 {
+    font-size: 45px;
+  }
+  .about {
+    width: 340px;
+  }
+  .about p {
+    font-size: 13px;
+  }
+  .me {
+    width: 190px;
+    height: 40px;
+    font-size: 17px;
+  }
+  .system {
+    display: none;
+  }
 }
 
 @media (max-width: 880px) {
@@ -725,44 +748,46 @@ table td {
     margin-top: 14px;
   }
   .box-plants-second,
-.box-plants-second-second,
-  .box-improve-second {
+  .box-plants-second-second,
+  .box-improve-second,
+  .box-improve-second-second {
     display: none;
   }
   .sla,
   .sla-second,
-  .improve {
+  .improve,
+  .improve-second {
     width: 55%;
   }
   .box-card-products:nth-child(4) {
     display: none;
   }
-  .commut-second{
+  .commut-second {
     display: none;
   }
-  .us img{
+  .us img {
     height: 250px;
     width: 250px;
   }
-  
-    .about h3 {
-      font-size: 15px;
-    }
-    .about h2 {
-      font-size: 35px;
-    }
-    .about {
-      width: 400px;
-      margin-left: 60px;
-    } 
-    .about p{
-      font-size: 13px;
-    }
-    .me{
-      width: 180px;
-      height: 38px;
-      font-size: 15px;
-    }
+
+  .about h3 {
+    font-size: 15px;
+  }
+  .about h2 {
+    font-size: 35px;
+  }
+  .about {
+    width: 400px;
+    margin-left: 60px;
+  }
+  .about p {
+    font-size: 13px;
+  }
+  .me {
+    width: 180px;
+    height: 38px;
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -796,35 +821,35 @@ table td {
     font-size: 16px;
     margin-top: 13px;
   }
-  .us img{
+  .us img {
     height: 200px;
     width: 200px;
   }
-  .us{
+  .us {
     display: flex;
     align-items: center;
   }
-  .about-us{
+  .about-us {
     margin-top: 75px;
   }
-    .about h3 {
-      font-size: 13px;
-    }
-    .about h2 {
-      font-size: 30px;
-      margin: 20px 0 15px 0px;
-    }
-    .about {
-      width: 300px;
-    } 
-    .about p{
-      font-size: 12px;
-    }
-    .me{
-      width: 160px;
-      height: 36px;
-      font-size: 14px;
-    }
+  .about h3 {
+    font-size: 13px;
+  }
+  .about h2 {
+    font-size: 30px;
+    margin: 20px 0 15px 0px;
+  }
+  .about {
+    width: 300px;
+  }
+  .about p {
+    font-size: 12px;
+  }
+  .me {
+    width: 160px;
+    height: 36px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 685px) {
@@ -864,13 +889,15 @@ table td {
   }
   .box-plants-first,
   .box-plants-second-first,
-  .box-improve-first {
+  .box-improve-first,
+  .box-improve-second-first {
     margin: 18px;
     height: 500px;
   }
   .box-plants-first p,
   .box-plants-second-first p,
-  .box-improve-first p {
+  .box-improve-first p,
+  .box-improve-second-first p {
     font-size: 45px;
   }
 }
@@ -908,13 +935,15 @@ table td {
   }
   .box-plants-first,
   .box-plants-second-first,
-  .box-improve-first {
+  .box-improve-first,
+  .box-improve-second-first {
     margin: 18px;
     height: 470px;
   }
   .box-plants-first p,
   .box-plants-second-first p,
-  .box-improve-first p {
+  .box-improve-first p,
+  .box-improve-second-first p {
     font-size: 40px;
   }
   .box-card-products:nth-child(4) {
@@ -930,29 +959,29 @@ table td {
     justify-content: center;
     margin: 50px 0 25px 0;
   }
-  .us img{
+  .us img {
     height: 190px;
     width: 190px;
   }
-  
-    .about h3 {
-      font-size: 11px;
-    }
-    .about h2 {
-      font-size: 25px;
-    }
-    .about {
-      width: 300px;
-      margin-left: 40px;
-    } 
-    .about p{
-      font-size: 10px;
-    }
-    .me{
-      width: 140px;
-      height: 32px;
-      font-size: 12px;
-    }
+
+  .about h3 {
+    font-size: 11px;
+  }
+  .about h2 {
+    font-size: 25px;
+  }
+  .about {
+    width: 300px;
+    margin-left: 40px;
+  }
+  .about p {
+    font-size: 10px;
+  }
+  .me {
+    width: 140px;
+    height: 32px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 583px) {
@@ -992,55 +1021,56 @@ table td {
   }
   .box-plants-first,
   .box-plants-second-first,
-  .box-improve-first {
+  .box-improve-first,
+  .box-improve-second-first {
     margin: 18px;
     height: 440px;
   }
   .box-plants-first p,
   .box-plants-second-first p,
-  .box-improve-first p {
+  .box-improve-first p,
+  .box-improve-second-first p {
     font-size: 37px;
   }
-  .us img{
+  .us img {
     height: 170px;
     width: 170px;
   }
-  
-    .about h3 {
-      font-size: 10px;
-    }
-    .about h2 {
-      font-size: 23px;
-    }
-    .about {
-      width: 250px;
-      margin-left: 38px;
-    } 
-    .about p{
-      font-size: 9px;
-    }
-    .me{
-      width: 130px;
-      height: 30px;
-      font-size: 11px;
-    }
-    footer{
+
+  .about h3 {
+    font-size: 10px;
+  }
+  .about h2 {
+    font-size: 23px;
+  }
+  .about {
+    width: 250px;
+    margin-left: 38px;
+  }
+  .about p {
+    font-size: 9px;
+  }
+  .me {
+    width: 130px;
+    height: 30px;
+    font-size: 11px;
+  }
+  footer {
     padding-left: 50px;
     height: 400px;
     margin-top: 50px;
     flex-direction: column-reverse;
     align-items: baseline;
     justify-content: space-evenly;
-    }
-    .e-mail input{
-      margin-top: 10px;
-    }
-    .me1 {
-
-      width: 65%;
-      height: 30px;
-      font-size: 11px;
-    }
+  }
+  .e-mail input {
+    margin-top: 10px;
+  }
+  .me1 {
+    width: 65%;
+    height: 30px;
+    font-size: 11px;
+  }
 }
 
 @media (max-width: 525px) {
@@ -1077,41 +1107,41 @@ table td {
 
   .box-plants-first p,
   .box-plants-second-first p,
-  .box-improve-first p {
+  .box-improve-first p,
+  .box-improve-second-first p {
     font-size: 35px;
   }
-  .us img{
+  .us img {
     height: 150px;
     width: 150px;
   }
-  
-    .about h3 {
-      font-size: 10px;
-    }
-    .about h2 {
-      font-size: 23px;
-    }
-    .about {
-      width: 230px;
-      margin-left: 38px;
-    } 
-    .about p{
-      font-size: 9px;
-    }
-    .me{
-      width: 125px;
-      height: 27px;
-      font-size: 11px;
-    }
-    .logo p,
-    .e-mail p{
-      font-size: 12px;
-    }
-    .e-mail input{
-      height: 30px;
-      font-size: 12px;
-    }
 
+  .about h3 {
+    font-size: 10px;
+  }
+  .about h2 {
+    font-size: 23px;
+  }
+  .about {
+    width: 230px;
+    margin-left: 38px;
+  }
+  .about p {
+    font-size: 9px;
+  }
+  .me {
+    width: 125px;
+    height: 27px;
+    font-size: 11px;
+  }
+  .logo p,
+  .e-mail p {
+    font-size: 12px;
+  }
+  .e-mail input {
+    height: 30px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 485px) {
@@ -1151,56 +1181,56 @@ table td {
   }
   .box-plants-first,
   .box-plants-second-first,
-  .box-improve-first {
+  .box-improve-first,
+  .box-improve-second-first {
     margin: 18px;
     height: 410px;
   }
   .box-plants-first p,
   .box-plants-second-first p,
-  .box-improve-first p {
+  .box-improve-first p,
+  .box-improve-second-first p {
     font-size: 32px;
   }
-  .us img{
+  .us img {
     height: 130px;
     width: 130px;
   }
 
-  
-    .about h3 {
-      font-size: 10px;
-    }
-    .about h2 {
-      font-size: 23px;
-    }
-    .about {
-      width: 200px;
-      margin-left: 30px;
-    } 
-    .about p{
-      font-size: 9px;
-    }
-    .me{
-      width: 115px;
-      height: 25px;
-      font-size: 10px;
-    }
+  .about h3 {
+    font-size: 10px;
+  }
+  .about h2 {
+    font-size: 23px;
+  }
+  .about {
+    width: 200px;
+    margin-left: 30px;
+  }
+  .about p {
+    font-size: 9px;
+  }
+  .me {
+    width: 115px;
+    height: 25px;
+    font-size: 10px;
+  }
 
-    .commut-first-title  p{
-font-size: 20px;
-    }
-.commut-first-text p,
-.commut-first-info p,
-.commut-first-time{
-  font-size: 13px;
-}
-.commut-first-title img{
-  width: 100px;
+  .commut-first-title p {
+    font-size: 20px;
+  }
+  .commut-first-text p,
+  .commut-first-info p,
+  .commut-first-time {
+    font-size: 13px;
+  }
+  .commut-first-title img {
+    width: 100px;
     height: 18px;
-}
-.commut-first{
-  height: 210px;
-}
-
+  }
+  .commut-first {
+    height: 210px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1240,15 +1270,16 @@ font-size: 20px;
   }
   .box-plants-first,
   .box-plants-second-first,
-  .box-improve-first {
+  .box-improve-first,
+  .box-improve-second-first {
     margin: 16px;
     height: 380px;
   }
   .box-plants-first p,
   .box-plants-second-first p,
-.box-plants-second-second p,
-.box-plants-second-third p 
-  .box-improve-first p {
+  .box-plants-second-second p,
+  .box-plants-second-third p .box-improve-first p,
+  .box-improve-second-first p {
     font-size: 25px;
     padding: 0 0 25px 15px;
   }
@@ -1260,12 +1291,11 @@ font-size: 20px;
   h2 {
     font-size: 25px;
   }
-  .commut-first-time{
+  .commut-first-time {
     margin-top: 35px;
   }
-  .us img{
+  .us img {
     height: 100px;
     width: 100px;
   }
-
 }
