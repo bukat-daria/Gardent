@@ -7,6 +7,28 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <nav class="full-screen">
+      <img class="cross" src="./image/cross.png" alt="#" />
+      <div class="backdrop"></div>
+      <ul class="burner-links">
+        <li class="burner-link">
+          <a class="burner-link-text" href="#">SHOP</a>
+        </li>
+        <li class="burner-link">
+          <a class="burner-link-text" href="#">PLAN TIPS </a>
+        </li>
+        <li class="burner-link">
+          <a class="burner-link-text" href="#">ABOUT</a>
+        </li>
+        <li class="burner-link">
+          <a class="burner-link-text" href="#">STORE</a>
+        </li>
+        <li class="burner-link">
+          <a class="burner-link-text" href="#">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+
     <header>
       <div class="header-navigation">
         <div class="header-navigation-box-first">
@@ -14,12 +36,19 @@
           <a href="#" class="header-text"> PLAN TIPS </a>
           <a href="#" class="header-text"> ABOUT </a>
         </div>
-        <h1>HEW GARDENT</h1>
+        <h1 id="title-project">HEW GARDENT</h1>
         <div class="header-navigation-box-second">
           <a href="#" class="header-text"> STORE </a>
           <a href="#" class="header-text"> CONTACT </a>
           <img src="/image/search.png" />
-          <img src="./image/menu.png" alt="#" />
+          <!--<form action="">
+            <input
+              placeholder="Plants"
+              class="search"
+              type="text"
+            />
+          </form>-->
+          <img class="burger-open" src="./image/menu.png" alt="#" />
         </div>
       </div>
     </header>
@@ -210,6 +239,62 @@
             </div>
           </div>
         </div>
+        <div class="com2">
+          <div class="commut-four">
+            <div class="commut-four-title">
+              <p>Rose</p>
+              <img src="./image/Group 13.png" alt="#" />
+            </div>
+            <div class="commut-four-text">
+              <img src="./image/Group 12.png" alt="#" />
+              <p>Verified Customer</p>
+            </div>
+            <div class="commut-four-info">
+              <p>
+                Fantastic new garden shop! They offer a superb variety of fresh flowers, speedy delivery. 
+              </p>
+            </div>
+            <div class="commut-four-time">
+              <p>6 days ago</p>
+            </div>
+          </div>
+          <div class="commut-five">
+            <div class="commut-five-title">
+              <p>Galina</p>
+              <img src="./image/Group 13.png" alt="#" />
+            </div>
+            <div class="commut-five-text">
+              <img src="./image/Group 12.png" alt="#" />
+              <p>Verified Customer</p>
+            </div>
+            <div class="commut-five-info">
+              <p>
+                I've ordered from Feey twice now, and both experiences have been fantastic. The plants arrived in excellent condition, beautifully and carefully packaged. Highly satisfied!
+              </p>
+            </div>
+            <div class="commut-five-time">
+              <p>18 days ago</p>
+            </div>
+          </div>
+          <div class="commut-sex">
+            <div class="commut-sex-title">
+              <p>Victoria</p>
+              <img src="./image/Group 13.png" alt="#" />
+            </div>
+            <div class="commut-sex-text">
+              <img src="./image/Group 12.png" alt="#" />
+              <p>Verified Customer</p>
+            </div>
+            <div class="commut-sex-info">
+              <p>
+                A wonderful shopping experience with a stunning array of plants and impressive after-sales service. Highly recommended!
+              </p>
+            </div>
+            <div class="commut-sex-time">
+              <p>1 days ago</p>
+            </div>
+          </div>
+        </div>
         <img class="arrow" src="image/Group 17.png" alt="#" />
       </div>
       <div class="about-us">
@@ -237,9 +322,9 @@
       <div class="logo">
         <h3>NEW GARDENT</h3>
         <div class="logo-card">
-          <img src="./image/Icon color f.png" alt="#" />
-          <img src="./image/Icon color.png" alt="#" />
-          <img src="./image/Group 14.png" alt="#" />
+          <a href="https://web.facebook.com/Gardenscapes/?locale=ru_RU&_rdc=1&_rdr#"><img src="./image/Icon color f.png" alt="#" /></a>
+          <a href="https://www.instagram.com/bush_gardens_florida/"><img src="./image/Icon color.png" alt="#" /></a>
+          <a href="https://www.youtube.com/@HuwRichards"><img src="./image/Group 14.png" alt="#" /></a>
         </div>
         <p><b>General questions</b></p>
         <p><b>E-mail:</b> hallo@new.gar</p>
@@ -277,17 +362,18 @@
       <div class="e-mail">
         <h3>New</h3>
         <p>Sign up for our awesome newsletter</p>
-        <input placeholder="E-Mail" type="email" />
+        <input id="e-mail" placeholder="E-Mail" type="email" />
+        <span id="email-error" class="error-message"></span>
         <button class="me1" id="myBtn">SUBSCRIBE</button>
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Успешно отправлено!</p>
-            </div>
-        </div>
       </div>
     </footer>
-
+    <div class="wrapper-modal none">
+      <div class="modal">
+        <div class="wrapper-content">
+          <h3 class="wrapper-content-text">Спасибо за подписку!</h3>
+        </div>
+      </div>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>
